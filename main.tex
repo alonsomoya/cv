@@ -1,0 +1,197 @@
+% a mashup of hipstercv, friggeri and twenty cv
+% https://www.latextemplates.com/template/twenty-seconds-resumecv
+% https://www.latextemplates.com/template/friggeri-resume-cv
+
+\documentclass[lighthipster]{simplehipstercv}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{raleway}
+\usepackage[margin=1cm, a4paper]{geometry}
+\hypersetup{hidelinks}
+
+%------------------------------------------------------------------ Variablen
+
+\newlength{\rightcolwidth}
+\newlength{\leftcolwidth}
+\setlength{\leftcolwidth}{0.23\textwidth}
+\setlength{\rightcolwidth}{0.75\textwidth}
+
+%------------------------------------------------------------------
+\title{New Simple CV}
+\author{\LaTeX{} Ninja}
+\date{September 2020}
+
+\pagestyle{empty}
+\begin{document}
+
+
+\thispagestyle{empty}
+%-------------------------------------------------------------
+
+\section*{Start}
+
+\simpleheader{headercolour}{Jose J.}{Alonso Moya}{Service Reliability Engineer at Amadeus}{white}
+
+%------------------------------------------------
+
+% this has to be here so the paracols starts..
+\subsection*{}
+\vspace{0.7em}
+
+\setlength{\columnsep}{1.5cm}
+\columnratio{0.23}[0.75]
+\begin{paracol}{2}
+\hbadness5000
+%\backgroundcolor{c[1]}[rgb]{1,1,0.8} % cream yellow for column-1 %\backgroundcolor{g}[rgb]{0.8,1,1} % \backgroundcolor{l}[rgb]{0,0,0.7} % dark blue for left margin
+
+\paracolbackgroundoptions
+
+% 0.9,0.9,0.9 -- 0.8,0.8,0.8
+
+
+\footnotesize
+{\setasidefontcolour
+\flushright
+\begin{righ}
+    \roundpic{jose.jpg}
+\end{center}
+
+% \bg{cvgreen}{white}{About me}\\[0.5em]
+
+% {\footnotesize
+% \lorem\lorem\lorem}
+% \bigskip
+
+\bg{cvgreen}{white}{personal} \\[0.5em]
+Jose J. Alonso Moya
+
+nationality: Spanish 
+
+1991
+
+\bigskip
+
+\bg{cvgreen}{white}{Areas of specialization} \\[0.5em]
+
+IT Operations ~•~ Software Engineering ~•~ Data Mining
+
+\bigskip
+
+
+
+\bigskip
+
+\bg{cvgreen}{white}{Favourite Quote}\\[0.5em]
+
+"It is not the strongest species that survive, nor the most intelligent, but the ones most responsive to change." \\
+(Leon C. Megginson)
+\bigskip
+
+\bg{cvgreen}{white}{Interests}\\[0.5em]
+
+\texttt{Climbing} ~/~ \texttt{Cycling} ~/~ \texttt{Squash} ~/~ \texttt{Snowboarding} ~/~ \texttt{IoT} ~/~ \texttt{MHL}~/~ \texttt{Linux}
+
+\vspace{4em}
+
+\infobubble{\faGlobe}{cvgreen}{white}{alonsomoya.com}
+\infobubble{\faLinkedin}{cvgreen}{white}{jjavieralonso}
+\infobubble{\faBitbucket}{cvgreen}{white}{jalonsomoya}
+\infobubble{\faGithub}{cvgreen}{white}{pant03}
+
+\phantom{turn the page}
+
+\phantom{turn the page}
+}
+%-----------------------------------------------------------
+\switchcolumn
+
+% \small
+\section*{Short Resumé}
+
+\begin{tabular}{r| p{0.27\textwidth} l l}
+    \cvevent{2018--2020}{SRE / Application Management}{Amadeus IT Group}{Erding, Germany \color{cvred}}{Permanent support an ultra-highly available applicative platform for Amadeus customers. Responsible for data center operations of multiple high-traffic C++/Java applications including: performance tuning, debugging, change/problem/incident management, PCI-DSS, automating
+deployment/recovery/patching, standardization and creation of new company-wide standards.}{Amadeus-IT_Logo.png}
+{\begin{tabular}[t]{r l} %@{\hspace{0.05em}}
+\\
+     \bg{skilllabelcolour}{iconcolour}{jenkins} &  \barrule{0.01}{0.5em}{cvpurple}\\
+     \bg{skilllabelcolour}{iconcolour}{k8s} &  \barrule{0.025}{0.5em}{cvpurple}\\
+     \bg{skilllabelcolour}{iconcolour}{docker} &  \barrule{0.045}{0.5em}{cvpurple}\\
+     \bg{skilllabelcolour}{iconcolour}{python} & \barrule{0.06}{0.5em}{cvgreen} \\
+     \bg{skilllabelcolour}{iconcolour}{ansible} & \barrule{0.07}{0.5em}{cvgreen} \\
+     \bg{skilllabelcolour}{iconcolour}{shell} & \barrule{0.05}{0.5em}{cvgreen} \\
+     \bg{skilllabelcolour}{iconcolour}{SUSE} & \barrule{0.025}{0.5em}{cvpurple} \\
+\end{tabular}} \\
+    \cvevent{2016--2018}{DevOps / Data Analyst}{CERN}{Geneva, Switzerland \color{cvred}}{System hardening, monitoring and alarming setup of the CERN's centralised Elasticsearch project, developing the system
+further towards a self-service like service for users.
+
+Autonomous design and development of a \textit{Predictive Anomaly Detection} service to provide dynamic alerting and self-curating capabilities in a distributed data mining setup.}{cern.png}
+{\begin{tabular}[t]{r l} %@{\hspace{0.05em}}
+\\
+     \bg{skilllabelcolour}{iconcolour}{openstack} &  \barrule{0.01}{0.5em}{cvpurple}\\
+     \bg{skilllabelcolour}{iconcolour}{puppet} & \barrule{0.025}{0.5em}{cvpurple} \\
+     \bg{skilllabelcolour}{iconcolour}{python} & \barrule{0.05}{0.5em}{cvgreen} \\
+     \bg{skilllabelcolour}{iconcolour}{RHEL} & \barrule{0.02}{0.5em}{cvpurple} \\
+     \bg{skilllabelcolour}{iconcolour}{rundeck} & \barrule{0.018}{0.5em}{cvpurple} \\
+     \bg{skilllabelcolour}{iconcolour}{tensorflow} & \barrule{0.035}{0.5em}{cvpurple} \\
+     \bg{skilllabelcolour}{iconcolour}{SciKit} & \barrule{0.05}{0.5em}{cvgreen} \\
+     
+\end{tabular}} \\
+    \cvevent{2016--2016}{Business Intelligence QA}{European Central Bank}{Frankfurt, Germany \color{cvred}}{Testing, integration and technical evolution of software deliveries from diverse external providers into the different pre-production environments of the Eurosystem Operations Database.}{ecb.png}
+    {\begin{tabular}[t]{r l} %@{\hspace{0.05em}}
+\\
+     \bg{skilllabelcolour}{iconcolour}{Informatica} &  \barrule{0.005}{0.5em}{cvpurple}\\
+     \bg{skilllabelcolour}{iconcolour}{Oracle} & \barrule{0.015}{0.5em}{cvpurple} \\
+     \bg{skilllabelcolour}{iconcolour}{Soap} & \barrule{0.01}{0.5em}{cvpurple} \\
+\end{tabular}} \\
+    \cvevent{2015--2016}{DTV Software Developer}{Optiva Media}{Madrid, Spain \color{cvred}}{Work in Software Development projects related with Digital TV: Hybrid TV, accessibility services, interactive applications, etc; }{optiva.png} {\begin{tabular}[t]{r l} %@{\hspace{0.05em}}
+\\
+     \bg{skilllabelcolour}{iconcolour}{ruby} &  \barrule{0.005}{0.5em}{cvpurple}\\
+     \bg{skilllabelcolour}{iconcolour}{javascript} & \barrule{0.03}{0.5em}{cvgreen} \\
+     \bg{skilllabelcolour}{iconcolour}{html} & \barrule{0.025}{0.5em}{cvpurple} \\
+     \bg{skilllabelcolour}{iconcolour}{css} & \barrule{0.02}{0.5em}{cvpurple} \\
+\end{tabular}} \\
+    \cvevent{2012--2013}{Cross-platform Application Developer}{Concappt Media GmbH}{Hamburg, Germany \color{cvred}}{}{concappt.png} {\begin{tabular}[t]{r l} %@{\hspace{0.05em}}
+\\
+     \bg{skilllabelcolour}{iconcolour}{Lua} &  \barrule{0.01}{0.5em}{cvpurple}\\
+     \bg{skilllabelcolour}{iconcolour}{Corona SDK} & \barrule{0.05}{0.5em}{cvgreen} \\
+\end{tabular}}
+
+\end{tabular}
+\vspace{1.5em}
+
+\begin{minipage}[t]{0.35\textwidth}
+\section*{Degrees}
+\begin{tabular}{r p{0.6\textwidth} c}
+    \cvdegree{2019}{Computer Science and Technology}{MSc.}{Madrid, Spain \color{headerblue}}{}{UC3M.png} \\
+    \cvdegree{2015}{Information Technology}{Exchange Year}{Sydney, Australia \color{headerblue}}{}{mqu.png} \\
+    \cvdegree{2014}{Business Informatics}{Exchange Year}{Darmstadt, Germany \color{headerblue}}{}{darmstadt.png} \\
+    \cvdegree{2015}{Computer Information Systems}{BSc.}{Madrid, Spain \color{headerblue}}{}{uah.jpg}
+\end{tabular}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.3\textwidth}
+\section*{Volunteering}
+\textbf{Python and Data Science Teacher}\newline\textsc{ReDI School of Digital Integration} \newline {~\faMapMarker ~ Munich, Germany}\newline {\footnotesize Teaching migrant and refugees to code, help them realize their potential, and give them a clear path into the future} \\
+
+\textbf{Visiting Science Teacher}\newline\textsc{Centrum Narovinu} \newline {~\faMapMarker ~ Rusinga Island, Kenya}\newline {\footnotesize  Visiting science enabler and IT admin at the project "Island of Hope" in north Kenya
+} \\
+
+\textbf{Coordinator}\newline\textsc{Voxxed Days CERN} \newline {~\faMapMarker ~ Geneva, Switzerland} \\
+\end{minipage}
+
+
+
+\vfill{} % Whitespace before final footer
+
+%----------------------------------------------------------------------------------------
+%	FINAL FOOTER
+%----------------------------------------------------------------------------------------
+\setlength{\parindent}{0pt}
+\begin{minipage}[t]{\rightcolwidth}
+\begin{center}\fontfamily{\sfdefault}\selectfont \color{black!70}
+{\small Jose Alonso \icon{\faMapMarker}{cvgreen}{} Erding, Germany\icon{\faPhone}{cvgreen}{} \href{https://calendly.com/josealonso/informal}{Click for details} \icon{\faAt}{cvgreen}{} \protect\textbf{\url{jose@alonsomoya.com}}
+}
+\end{center}
+\end{minipage}
+
+\end{paracol}
+
+\end{document}
