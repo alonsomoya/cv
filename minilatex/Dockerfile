@@ -1,6 +1,4 @@
-ARG VERSION
-
-FROM josealo/minilatex:$VERSION
+FROM ubuntu:bionic
 
 ENV PATH="${PATH}:/root/bin"
 # combine into one run command to reduce image size
