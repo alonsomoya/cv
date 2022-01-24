@@ -8,4 +8,7 @@ docker build --no-cache --build-arg VERSION=v$_BASE_VERSION -t latex:latest $_DI
 docker create -ti --name latexc latex:latest bash
 docker cp latexc:/var/local/main.pdf $_DIR/CV_JoseAlonso.pdf
 docker rm -f latexc
-which mupdf &>/dev/null && mupdf $_DIR/CV_JoseAlonso.pdf &
+pdftoppm CV_JoseAlonso.pdf CV_JoseAlonso -png -singlefile
+convert -border 5 -bordercolor black CV_JoseAlonso.png CV_JoseAlonso.png
+#which mupdf &>/dev/null && mupdf $_DIR/CV_JoseAlonso.pdf &
+which feh &>/dev/null && feh $_DIR/CV_JoseAlonso.png &
